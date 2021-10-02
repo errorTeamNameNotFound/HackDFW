@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:hackdfw/texts.dart';
 import 'package:hackdfw/styles.dart';
 
-class HomeContent extends StatefulWidget {
+class MatchesContent extends StatefulWidget {
   @override
-  _HomeContentState createState() => _HomeContentState();
+  _MatchesContentState createState() => _MatchesContentState();
 }
 
-class _HomeContentState extends State<HomeContent> {
+class _MatchesContentState extends State<MatchesContent> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

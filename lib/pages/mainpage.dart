@@ -17,8 +17,8 @@ class _HomePageState extends State<HomePage> {
    */
   final List<Widget> _widgetOption = <Widget>[
     Text("Profile"),
-    HomeContent(),
     Text("Chat"),
+    MatchesContent(),
   ];
 
   void _onItemTapped(int index) {
@@ -40,13 +40,13 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Styles.kOffWhite,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_filled),
-            label: 'Home',
+            icon: Icon(Icons.chat_bubble),
+            label: 'Chat',
             backgroundColor: Styles.kOffWhite,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
+            icon: Icon(Icons.supervisor_account),
+            label: 'Matches',
             backgroundColor: Styles.kOffWhite,
           ),
         ],
