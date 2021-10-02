@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:hackdfw/pages/pagecontent/homecontent.dart';
 import 'package:hackdfw/styles.dart';
 
 class HomePage extends StatefulWidget {
@@ -9,9 +12,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
-  static const List<Widget> _widgetOption = <Widget>[
-    Text("Home"),
+  /*
+  Add widget pages here
+   */
+  final List<Widget> _widgetOption = <Widget>[
     Text("Profile"),
+    HomeContent(),
     Text("Chat"),
   ];
 
@@ -70,29 +76,7 @@ class _HomePageState extends State<HomePage> {
           Content
            */
           SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: const <Widget>[
-                Center(
-                  child: Text(
-                    "Home",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
-                      color: Styles.kOffWhite,
-                    ),
-                  ),
-                ),
-                /*
-                Recent matches
-                 */
-                // Row(
-                //   children: <Widget>[
-                //     Text("Testing"),
-                //   ],
-                // ),
-              ],
-            ),
+            child: _widgetOption.elementAt(_selectedIndex),
           ),
         ],
       ),
