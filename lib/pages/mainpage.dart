@@ -55,29 +55,21 @@ class _HomePageState extends State<HomePage> {
         onTap: _onItemTapped,
       ),
       body: Stack(
+        fit: StackFit.expand,
         children: <Widget>[
           /*
           Background
            */
           Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment
-                    .bottomCenter, // 10% of the width, so there are ten blinds.
-                colors: <Color>[
-                  Styles.kDarkBlue,
-                  Styles.kBlue,
-                ], // red to yellow
-              ),
+            child: Image.asset(
+              "images/background.png",
+              fit: BoxFit.fill,
             ),
           ),
           /*
           Content
            */
-          SafeArea(
-            child: _widgetOption.elementAt(_selectedIndex),
-          ),
+          _widgetOption.elementAt(_selectedIndex),
         ],
       ),
     );

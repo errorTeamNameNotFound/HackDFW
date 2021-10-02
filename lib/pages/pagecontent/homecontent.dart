@@ -108,7 +108,12 @@ class _HomeContentState extends State<HomeContent> {
                 SizedBox(
                   width: 20,
                 ),
+                /*
+                Make into list view builder
+                 */
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: const <Widget>[
                     Text(
                       "Event Title",
