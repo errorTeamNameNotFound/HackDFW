@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:hackdfw/texts.dart';
@@ -14,49 +14,97 @@ class _MatchesContentState extends State<MatchesContent> {
   @override
 
   Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-          onPressed: () async {
-            await userById("6157fe7f3b9b0d9d44b68762");
-          },
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            SizedBox(
-              height: 90,
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          SizedBox(
+            height: 90,
+          ),
+          Center(
+            child: Text(
+              "Today's Matches",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+                color: Styles.kOffWhite,
+              ),
             ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          GestureDetector(
+            onTap: () {
+              print("chat with that person now");
+            },
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 60),
+              height: 60,
+              decoration: BoxDecoration(
+                color: Styles.kOffWhite,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Center(
+                child: Text(
+                  "Chat now!",
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 50,
+          ),
 
-            /*
-            Recent matches
-             */
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.arrow_back),
+          /*
+          Connections
+           */
+          // ignore: prefer_const_constructors
+          Center(
+            child: Text(
+              "Connections",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+                color: Styles.kOffWhite,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_back),
+                color: Styles.kOffWhite,
+                iconSize: 40,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(
+                  vertical: 15,
+                  horizontal: 5,
+                ),
+                height: 300,
+                width: 300,
+                decoration: BoxDecoration(
                   color: Styles.kOffWhite,
                   iconSize: 40,
                 ),
-                Container(
-                  margin: EdgeInsets.symmetric(
-                    vertical: 15,
-                    horizontal: 5,
-                  ),
-                  height: 400,
-                  width: 300,
-                  decoration: BoxDecoration(
-                    color: Styles.kOffWhite,
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child: child: Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 30.0),
                   child: Column(
-                    children: [
+                    children: <Widget>[
                       CircleAvatar(
                         minRadius: 70,
+                      ),
+                      SizedBox(
+                        height: 20,
                       ),
                       Text(
                         "Jonathan Doe",
@@ -65,6 +113,9 @@ class _MatchesContentState extends State<MatchesContent> {
                           fontSize: 25,
                           color: Styles.kGray,
                         ),
+                      ),
+                      SizedBox(
+                        height: 10,
                       ),
                       Text(
                         "Male, 25",
@@ -75,70 +126,81 @@ class _MatchesContentState extends State<MatchesContent> {
                       )
                     ],
                   ),
-                
                 ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.arrow_forward),
-                  color: Styles.kOffWhite,
-                  iconSize: 40,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Center(
-              child: Text(
-                "Events Near You",
-                style: TextStyle(color: Styles.kOffWhite, fontSize: 25),
               ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(
-                vertical: 15,
-                horizontal: 20,
-              ),
-              height: 90,
-              decoration: BoxDecoration(
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.arrow_forward),
                 color: Styles.kOffWhite,
-                borderRadius: BorderRadius.circular(30),
+                iconSize: 40,
               ),
+            ],
+          ),
+          SizedBox(
+            height: 50,
+          ),
+
+          /*
+          Lost Matches
+           */
+          // ignore: prefer_const_constructors
+          Center(
+            child: Text(
+              "Lost Matches",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+                color: Styles.kOffWhite,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(
+              vertical: 15,
+              horizontal: 62,
+            ),
+            height: 120,
+            width: 150,
+            decoration: BoxDecoration(
+              color: Styles.kOffWhite,
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  ClipRRect(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      bottomLeft: Radius.circular(30),
-                    ),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Styles.kYellow,
-                      ),
-                      width: 130,
-                    ),
+                  CircleAvatar(
+                    minRadius: 40,
                   ),
                   SizedBox(
-                    width: 20,
+                    width: 16,
                   ),
-                  /*
-                  Make into list view builder
-                   */
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const <Widget>[
-                      Text(
-                        "Event Title",
-                        style: TextStyle(
-                          fontSize: 18,
-                        ),
+                    children: <Widget>[
+                      SizedBox(
+                        height: 10,
                       ),
                       Text(
-                        "Event time | 4 / 5",
+                        "Janette Doe",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Styles.kGray,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "Male, 25",
                         style: TextStyle(
                           fontSize: 16,
+                          color: Styles.kGray,
                         ),
                       ),
                     ],
@@ -146,8 +208,115 @@ class _MatchesContentState extends State<MatchesContent> {
                 ],
               ),
             ),
-          ],
-        ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(
+              vertical: 15,
+              horizontal: 62,
+            ),
+            height: 120,
+            width: 150,
+            decoration: BoxDecoration(
+              color: Styles.kOffWhite,
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  CircleAvatar(
+                    minRadius: 40,
+                  ),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "Sue Doe",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Styles.kGray,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "Female, 25",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Styles.kGray,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(
+              vertical: 15,
+              horizontal: 62,
+            ),
+            height: 120,
+            width: 150,
+            decoration: BoxDecoration(
+              color: Styles.kOffWhite,
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  CircleAvatar(
+                    minRadius: 40,
+                  ),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "Janette Doe",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Styles.kGray,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "Male, 25",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Styles.kGray,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 50,
+          ),
+        ],
       ),
     );
   }
