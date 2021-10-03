@@ -237,7 +237,7 @@ class _MatchesContentState extends State<MatchesContent> {
                         height: 10,
                       ),
                       Text(
-                        "Sue Doe",
+                        "Fred Doe",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
@@ -248,7 +248,7 @@ class _MatchesContentState extends State<MatchesContent> {
                         height: 10,
                       ),
                       Text(
-                        "Female, 25",
+                        "Male, 25",
                         style: TextStyle(
                           fontSize: 16,
                           color: Styles.kGray,

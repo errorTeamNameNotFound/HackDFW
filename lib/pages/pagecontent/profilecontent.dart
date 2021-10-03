@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hackdfw/styles.dart';
+import 'package:hackdfw/globals.dart' as globals;
 
 class ProfileContent extends StatefulWidget {
   @override
@@ -60,7 +61,7 @@ class _ProfileContentState extends State<ProfileContent> {
             Column(
               children: <Widget>[
                 Text(
-                  "Jonathan Doe",
+                  "Sue Smith",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
@@ -71,7 +72,7 @@ class _ProfileContentState extends State<ProfileContent> {
                   height: 10,
                 ),
                 Text(
-                  "Male, 25",
+                  "Female, 27",
                   style: TextStyle(
                     fontSize: 20,
                     color: Styles.kOffWhite,

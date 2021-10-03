@@ -5,5 +5,7 @@ Channel channel = 4 as Channel;
 
 
 
-String question = "";
+String question = "Does pinapple belong on pizza?";
+
+String answer = '';
 

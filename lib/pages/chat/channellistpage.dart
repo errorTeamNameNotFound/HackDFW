@@ -13,9 +13,6 @@ class ChannelListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-      ),
       // bottomNavigationBar: LowerNavigationBarWidget(),
       body: ChannelsBloc(
         child: ChannelListView(

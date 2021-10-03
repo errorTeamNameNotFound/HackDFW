@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat_bubble),
-            label: 'Chat',
+            label: 'Today\'s Match',
             backgroundColor: Styles.kOffWhite,
           ),
           BottomNavigationBarItem(
