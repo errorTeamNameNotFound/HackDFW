@@ -21,7 +21,7 @@ class ChannelListPage extends StatelessWidget {
         child: ChannelListView(
           filter: Filter.and([
             Filter.equal('type', 'messaging'),
-            Filter.in_('members', ['Sue']),
+            Filter.in_('members', ['John']),
           ]),
           sort: const [SortOption('last_message_at')],
           pagination: const PaginationParams(
