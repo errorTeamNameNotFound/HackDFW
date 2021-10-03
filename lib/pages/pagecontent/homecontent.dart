@@ -60,6 +60,7 @@ class _MatchesContentState extends State<MatchesContent> {
                   color: Styles.kOffWhite,
                   borderRadius: BorderRadius.circular(30),
                 ),
+                child: Text("testing"),
               ),
               IconButton(
                 onPressed: () {},
