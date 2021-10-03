@@ -4,25 +4,28 @@ import 'package:flutter/material.dart';
 import 'package:hackdfw/texts.dart';
 import 'package:hackdfw/styles.dart';
 
-class HomeContent extends StatefulWidget {
+class MatchesContent extends StatefulWidget {
   @override
-  _HomeContentState createState() => _HomeContentState();
+  _MatchesContentState createState() => _MatchesContentState();
 }
 
-class _HomeContentState extends State<HomeContent> {
+class _MatchesContentState extends State<MatchesContent> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+          SizedBox(
+            height: 90,
+          ),
           /*
           Page Heading
            */
           // ignore: prefer_const_constructors
           Center(
             child: Text(
-              Texts.kHomeLabel,
+              "Recent Matches",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 30,
@@ -31,17 +34,12 @@ class _HomeContentState extends State<HomeContent> {
             ),
           ),
           SizedBox(
-            height: 40,
+            height: 10,
           ),
+
           /*
           Recent matches
            */
-          Center(
-            child: Text(
-              "Recent Matches",
-              style: TextStyle(color: Styles.kOffWhite, fontSize: 25),
-            ),
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -72,7 +70,7 @@ class _HomeContentState extends State<HomeContent> {
             ],
           ),
           SizedBox(
-            height: 40,
+            height: 30,
           ),
           Center(
             child: Text(
@@ -108,7 +106,12 @@ class _HomeContentState extends State<HomeContent> {
                 SizedBox(
                   width: 20,
                 ),
+                /*
+                Make into list view builder
+                 */
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: const <Widget>[
                     Text(
                       "Event Title",
