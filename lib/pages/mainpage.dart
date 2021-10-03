@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackdfw/pages/pagecontent/homecontent.dart';
 import 'package:hackdfw/styles.dart';
-import 'package:hackdfw/pages/chat/ChannelListPage.dart';
+import 'package:hackdfw/pages/chat/channellistpage.dart';
 import 'package:stream_chat_flutter/stream_chat_flutter.dart';
 import 'package:hackdfw/globals.dart' as globals;
 

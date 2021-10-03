@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackdfw/pages/mainpage.dart';
-import 'package:hackdfw/pages/chat/ChannelListPage.dart';
+import 'package:hackdfw/pages/chat/channellistpage.dart';
 import 'package:flutter/material.dart';
 import 'package:stream_chat_flutter/stream_chat_flutter.dart';
 import 'package:hackdfw/globals.dart' as globals;
@@ -43,15 +43,26 @@ Future<void> main() async {
   /// Please see the following for more information:
   /// https://getstream.io/chat/docs/flutter-dart/tokens_and_authentication/?language=dart
   await client.connectUser(
-    User(id: 'John'),
+    User(id: 'Sue'),
     '''eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiSm9obiJ9.VuXsV-__FTeKcfrW-QSec48ZZZeb0KVNut3ynUMk88M''',
   );
+
+
 
   /// Creates a channel using the type `messaging` and `flutterdevs`.
   /// Channels are containers for holding messages between different members. To
   /// learn more about channels and some of our predefined types, checkout our
   /// our channel docs: https://getstream.io/chat/docs/flutter-dart/creating_channels/?language=dart
-  final channel = client.channel('messaging', id: 'cinder');
+  // final channel = client.channel("messaging", extraData: {"members": ["Sue", "John"]});
+  // final channel = client.channel('messaging', id: 'cinder');
+  final channel = client.channel(
+    "messaging",
+    id: "cinder",
+    extraData: {
+      "name": "cinderella",
+      "members": ["John", "Sue"],
+    },
+  );
   globals.channel = channel;
 
   /// `.watch()` is used to create and listen to the channel for updates. If the
