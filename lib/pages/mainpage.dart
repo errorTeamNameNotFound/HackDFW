@@ -3,6 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:hackdfw/pages/pagecontent/homecontent.dart';
 import 'package:hackdfw/styles.dart';
+import 'package:hackdfw/pages/chat/ChannelListPage.dart';
+import 'package:stream_chat_flutter/stream_chat_flutter.dart';
+import 'package:hackdfw/globals.dart' as globals;
 
 class HomePage extends StatefulWidget {
   @override
@@ -18,7 +21,11 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _widgetOption = <Widget>[
     Text("Profile"),
     HomeContent(),
-    Text("Chat"),
+    // Text("Chat"),
+    StreamChannel(
+      child: const ChannelListPage(),
+      channel: globals.channel,
+    ),
   ];
 
   void _onItemTapped(int index) {
