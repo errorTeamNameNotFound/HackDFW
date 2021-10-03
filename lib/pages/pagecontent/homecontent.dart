@@ -54,13 +54,37 @@ class _MatchesContentState extends State<MatchesContent> {
                   vertical: 15,
                   horizontal: 5,
                 ),
-                height: 400,
+                height: 260,
                 width: 300,
                 decoration: BoxDecoration(
                   color: Styles.kOffWhite,
                   borderRadius: BorderRadius.circular(30),
                 ),
-                child: Text("testing"),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        minRadius: 70,
+                      ),
+                      Text(
+                        "Jonathan Doe",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Styles.kGray,
+                        ),
+                      ),
+                      Text(
+                        "Male, 25",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Styles.kGray,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ),
               IconButton(
                 onPressed: () {},
