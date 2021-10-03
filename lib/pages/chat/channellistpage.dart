@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:stream_chat_flutter/stream_chat_flutter.dart';
 import 'package:hackdfw/globals.dart' as globals;
 
-import 'channelpage.dart';
+import 'package:hackdfw/pages/chat/channelpage.dart';
 
 class ChannelListPage extends StatelessWidget {
   const ChannelListPage({
