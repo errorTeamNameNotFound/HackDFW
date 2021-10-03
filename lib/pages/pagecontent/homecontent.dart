@@ -12,7 +12,6 @@ class MatchesContent extends StatefulWidget {
 
 class _MatchesContentState extends State<MatchesContent> {
   @override
-
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
@@ -93,8 +92,8 @@ class _MatchesContentState extends State<MatchesContent> {
                 height: 300,
                 width: 300,
                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
                   color: Styles.kOffWhite,
-                  iconSize: 40,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(top: 30.0),
@@ -197,7 +196,7 @@ class _MatchesContentState extends State<MatchesContent> {
                         height: 10,
                       ),
                       Text(
-                        "Male, 25",
+                        "Female, 25",
                         style: TextStyle(
                           fontSize: 16,
                           color: Styles.kGray,
@@ -290,7 +289,7 @@ class _MatchesContentState extends State<MatchesContent> {
                         height: 10,
                       ),
                       Text(
-                        "Janette Doe",
+                        "Nathan Doe",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,

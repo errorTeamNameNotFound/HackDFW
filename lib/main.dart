@@ -6,9 +6,7 @@ import 'package:stream_chat_flutter/stream_chat_flutter.dart';
 import 'package:hackdfw/globals.dart' as globals;
 import 'package:hackdfw/pages/pagecontent/landingpage.dart';
 
-
 Future<void> main() async {
-
   // WidgetsFlutterBinding.ensureInitialized();
   // /*
   // for local notifications
@@ -46,8 +44,6 @@ Future<void> main() async {
     User(id: 'Sue'),
     '''eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiSm9obiJ9.VuXsV-__FTeKcfrW-QSec48ZZZeb0KVNut3ynUMk88M''',
   );
-
-
 
   /// Creates a channel using the type `messaging` and `flutterdevs`.
   /// Channels are containers for holding messages between different members. To
@@ -91,7 +87,7 @@ class MyApp extends StatelessWidget {
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         return OrientationBuilder(
@@ -109,11 +105,11 @@ class MyApp extends StatelessWidget {
               //initialRoute: "/NFCAchieved",
               //  Page Routes
               routes: {
-                "/HomePage": (context) => HomePage(),
+                "/HomePage": (context) => LandingPage(),
                 "/ChatPage": (context) => StreamChannel(
-                  channel: channel,
-                  child: const ChannelListPage(),
-                ),
+                      channel: channel,
+                      child: const ChannelListPage(),
+                    ),
               },
             );
           },
