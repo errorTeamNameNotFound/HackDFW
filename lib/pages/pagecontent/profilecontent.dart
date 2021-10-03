@@ -9,6 +9,20 @@ class ProfileContent extends StatefulWidget {
 }
 
 class _ProfileContentState extends State<ProfileContent> {
+  late TextEditingController _bioTextController;
+
+  @override
+  void initState() {
+    super.initState();
+    _bioTextController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _bioTextController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -38,7 +52,7 @@ class _ProfileContentState extends State<ProfileContent> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             CircleAvatar(
-              minRadius: 70,
+              minRadius: 65,
             ),
             SizedBox(
               width: 25,
@@ -75,6 +89,58 @@ class _ProfileContentState extends State<ProfileContent> {
                 topRight: Radius.circular(30),
               ),
               color: Styles.kOffWhite,
+            ),
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                vertical: 30,
+              ),
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(
+                        Icons.location_on,
+                        color: Colors.grey,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "Frisco, TX",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    height: 356,
+                    margin: EdgeInsets.symmetric(
+                      vertical: 20,
+                      horizontal: 30,
+                    ),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.grey,
+                      ),
+                      borderRadius: BorderRadius.circular(30),
+                      color: Styles.kOffWhite,
+                    ),
+                    child: TextField(
+                      controller: _bioTextController,
+                      onChanged: (String value) {
+                        setState(() {});
+                      },
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Hi. This is my bio.",
+                      ),
+                      keyboardType: TextInputType.multiline,
+                      maxLines: 15,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
