@@ -4,7 +4,7 @@ import 'package:hackdfw/pages/chat/channellistpage.dart';
 import 'package:flutter/material.dart';
 import 'package:stream_chat_flutter/stream_chat_flutter.dart';
 import 'package:hackdfw/globals.dart' as globals;
-
+import 'package:hackdfw/pages/pagecontent/landingpage.dart';
 
 
 Future<void> main() async {
