@@ -27,23 +27,6 @@ class _MatchesContentState extends State<MatchesContent> {
             SizedBox(
               height: 90,
             ),
-            /*
-            Page Heading
-             */
-            // ignore: prefer_const_constructors
-            Center(
-              child: Text(
-                "Recent Matches",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
-                  color: Styles.kOffWhite,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
 
             /*
             Recent matches
@@ -68,7 +51,31 @@ class _MatchesContentState extends State<MatchesContent> {
                     color: Styles.kOffWhite,
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  child: Text("testing"),
+                  child: child: Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        minRadius: 70,
+                      ),
+                      Text(
+                        "Jonathan Doe",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Styles.kGray,
+                        ),
+                      ),
+                      Text(
+                        "Male, 25",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Styles.kGray,
+                        ),
+                      )
+                    ],
+                  ),
+                
                 ),
                 IconButton(
                   onPressed: () {},
