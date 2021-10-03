@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackdfw/texts.dart';
 import 'package:hackdfw/styles.dart';
+import 'package:hackdfw/backendcalls/dailyquestions.dart';
 
 class MatchesContent extends StatefulWidget {
   @override
@@ -11,6 +12,7 @@ class MatchesContent extends StatefulWidget {
 
 class _MatchesContentState extends State<MatchesContent> {
   @override
+
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
@@ -92,7 +94,7 @@ class _MatchesContentState extends State<MatchesContent> {
                 width: 300,
                 decoration: BoxDecoration(
                   color: Styles.kOffWhite,
-                  borderRadius: BorderRadius.circular(30),
+                  iconSize: 40,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.only(top: 30.0),
