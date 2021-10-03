@@ -136,7 +136,7 @@ class _ProfileContentState extends State<ProfileContent> {
                       },
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Hi. This is my bio.",
+                        hintText: "Hello, my name is John and I'm looking forwrad to meeting you today",
                       ),
                       keyboardType: TextInputType.multiline,
                       maxLines: 15,

@@ -41,7 +41,7 @@ Future<void> main() async {
   /// Please see the following for more information:
   /// https://getstream.io/chat/docs/flutter-dart/tokens_and_authentication/?language=dart
   await client.connectUser(
-    User(id: 'Sue'),
+    User(id: 'John'),
     '''eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiSm9obiJ9.VuXsV-__FTeKcfrW-QSec48ZZZeb0KVNut3ynUMk88M''',
   );
 
@@ -53,9 +53,9 @@ Future<void> main() async {
   // final channel = client.channel('messaging', id: 'cinder');
   final channel = client.channel(
     "messaging",
-    id: "cinder",
+    id: "Your-Match",
     extraData: {
-      "name": "cinderella",
+      "name": "chaterella",
       "members": ["John", "Sue"],
     },
   );
