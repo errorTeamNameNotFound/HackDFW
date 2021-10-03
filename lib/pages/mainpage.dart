@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:hackdfw/pages/pagecontent/chatcontent.dart';
 import 'package:hackdfw/pages/pagecontent/homecontent.dart';
 import 'package:hackdfw/pages/pagecontent/profilecontent.dart';
 import 'package:hackdfw/styles.dart';
@@ -18,7 +19,7 @@ class _HomePageState extends State<HomePage> {
    */
   final List<Widget> _widgetOption = <Widget>[
     ProfileContent(),
-    Text("Chat"),
+    ChatContent(),
     MatchesContent(),
   ];
 
