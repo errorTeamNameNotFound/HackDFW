@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hackdfw/pages/pagecontent/homecontent.dart';
+import 'package:hackdfw/pages/pagecontent/profilecontent.dart';
 import 'package:hackdfw/styles.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   Add widget pages here
    */
   final List<Widget> _widgetOption = <Widget>[
-    Text("Profile"),
+    ProfileContent(),
     Text("Chat"),
     MatchesContent(),
   ];

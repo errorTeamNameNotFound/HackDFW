@@ -16,13 +16,16 @@ class _MatchesContentState extends State<MatchesContent> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+          SizedBox(
+            height: 90,
+          ),
           /*
           Page Heading
            */
           // ignore: prefer_const_constructors
           Center(
             child: Text(
-              Texts.kHomeLabel,
+              "Recent Matches",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 30,
@@ -31,17 +34,12 @@ class _MatchesContentState extends State<MatchesContent> {
             ),
           ),
           SizedBox(
-            height: 40,
+            height: 10,
           ),
+
           /*
           Recent matches
            */
-          Center(
-            child: Text(
-              "Recent Matches",
-              style: TextStyle(color: Styles.kOffWhite, fontSize: 25),
-            ),
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -72,7 +70,7 @@ class _MatchesContentState extends State<MatchesContent> {
             ],
           ),
           SizedBox(
-            height: 40,
+            height: 30,
           ),
           Center(
             child: Text(
