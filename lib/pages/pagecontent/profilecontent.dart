@@ -67,6 +67,9 @@ class _ProfileContentState extends State<ProfileContent> {
                     color: Styles.kOffWhite,
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
                 Text(
                   "Male, 25",
                   style: TextStyle(
